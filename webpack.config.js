@@ -9,7 +9,7 @@ const isDev = !isProd;
 
 const filename = ext => isDev ? `bundle.${ext}` : `bundle.[hash].${ext}`;
 
-const isLoaders = () => {
+const jsLoaders = () => {
     const loaders = [
         {
             loader: 'babel-loader',
@@ -89,13 +89,7 @@ module.exports = {
             {
                 test: '/\.js$/',
                 exclude: /node_modules/,
-                use: isLoaders(),
-                loader: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
-                    }
-                }
+                use: jsLoaders()
             }
         ]
     }
