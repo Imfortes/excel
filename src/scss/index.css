@@ -130,6 +130,7 @@
   border: 1px solid #c0c0c0;
   background: #f8f9fa;
   border-top: none;
+  position: relative;
 }
 .excel__table .row-data {
   display: flex;
@@ -145,6 +146,7 @@
   height: 100%;
   border-top: 0;
   border-left: 0;
+  position: relative;
 }
 .excel__table .cell {
   min-width: 40px;
@@ -162,6 +164,33 @@
   border: none;
   outline: 2px solid #3c74ff;
   z-index: 2;
+}
+.excel__table .col-resize,
+.excel__table .row-resize {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #3c74ff;
+  opacity: 0;
+  z-index: 1000;
+}
+.excel__table .col-resize:hover,
+.excel__table .row-resize:hover {
+  opacity: 1 !important;
+}
+.excel__table .col-resize {
+  top: 0;
+  width: 2px;
+}
+.excel__table .col-resize:hover {
+  cursor: col-resize;
+}
+.excel__table .row-resize {
+  left: 0;
+  height: 4px;
+}
+.excel__table .row-resize:hover {
+  cursor: row-resize;
 }
 
 .db .db__header {
