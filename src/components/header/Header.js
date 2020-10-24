@@ -1,7 +1,13 @@
 import {ExcelComponent} from '@core/ExcelComponent';
 
 export class Header extends ExcelComponent {
-    
+
+    constructor($root, options) {
+        super($root, {
+            name: 'Header',
+            ...options
+        })
+    }
 
     toHTML() {
         return `
@@ -28,4 +34,6 @@ export class Header extends ExcelComponent {
         </div>        
         `
     }
+
+
 }
