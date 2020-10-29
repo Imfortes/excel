@@ -12,6 +12,7 @@ import {defaultStyles} from '@/constants';
 import {parse} from '@/core/parse';
 
 export class Table extends ExcelComponent {
+    
 
     constructor($root, options) {
         super($root, {
