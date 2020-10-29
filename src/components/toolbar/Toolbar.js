@@ -1,4 +1,3 @@
-import {ExcelComponent} from '@core/ExcelComponent';
 import {createToolbar} from '@/components/toolbar/toolbar.template';
 import {$} from '@core/dom';
 import {ExcelStateComponent} from '@core/ExcelStateComponent';

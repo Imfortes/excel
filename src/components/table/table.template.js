@@ -1,6 +1,7 @@
 import {defaultStyles} from '@/constants';
-import {camelToDashCase, toInlineStyles} from '@core/utils';
+import {toInlineStyles} from '@core/utils';
 import {parse} from '@/core/parse';
+import {$} from '@core/dom';
 
 const CODES = {
     A: 65,
@@ -68,8 +69,7 @@ function createRow(index, content = '', state) {
     const height = getHeight(state, index)
 
 
-    return `
-        <div class="excel__table">
+    return $.create('div', 'excel__table').html(`
             <div class="row" 
                 data-type="resizable" 
                 data-row="${index}"
@@ -81,8 +81,8 @@ function createRow(index, content = '', state) {
                 </div>
                 <div class="row-data">${content}</div>
             </div>   
-        </div>
     `
+    )
 }
 
 function toChar(_, index) {
